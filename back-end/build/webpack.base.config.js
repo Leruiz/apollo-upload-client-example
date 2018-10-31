@@ -13,12 +13,6 @@ let config = {
     rules: [
       // only lint local *.vue files
       {
-        test: /\.(js|vue)$/,
-        loader: 'eslint-loader',
-        enforce: 'pre',
-        exclude: /node_modules/
-      },
-      {
         test: /\.js$/,
         use: 'babel-loader',
         exclude: /node_modules/
