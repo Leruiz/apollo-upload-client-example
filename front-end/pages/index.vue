@@ -34,7 +34,9 @@ export default {
   },
   data() {
     return {
-      message: null
+      message:  {
+        message: ''
+      }
     }
   },
   apollo: {
