@@ -1,0 +1,6 @@
+build/**
+node_modules/**
+.nuxt/**
+dist/**
+src-nuxt/plugins/custom-vue-pouch.js
+dist/**
