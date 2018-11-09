@@ -1,0 +1,11 @@
+{
+    "presets": [
+      "@babel/preset-es2017",
+      "@babel/preset-stage-3"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-optional-chaining",
+      ["@babel/plugin-proposal-decorators", {"legacy": true}]
+    ]
+  }
+  

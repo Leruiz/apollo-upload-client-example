@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "module": "commonjs",
+    "target": "es6",
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "baseUrl": "./",
+    "paths": {
+      "~model/*": [
+        "src-model/*"
+      ],
+      "~dao/*": [
+        "src-dao/*"
+      ],
+      "~loader/*": [
+        "src-loader/*"
+      ]
+    },
+    "lib": [
+      "es5",
+      "es6",
+      "dom",
+      "es2015",
+      "esnext.asynciterable"
+    ],
+    "types": ["node"],
+    "typeRoots": [
+      "node_modules/@types"
+   ]
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "include": ["src-server/handler.ts"],
+  "files": [
+    "src-graphql/graphql.d.ts"
+  ]
+}
