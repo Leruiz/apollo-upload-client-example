@@ -61,11 +61,16 @@ module.exports = {
     /*
     ** You can extend webpack config here
     */
+    transpile: ['apollo-upload-client'],
+    babel: {
+      ignore: [/[\/\\]core-js/, /@babel[\/\\]runtime/],
+      plugins: [
+        '@babel/plugin-syntax-dynamic-import',
+        '@babel/plugin-transform-modules-commonjs'
+      ]
+    },
     extend(config, ctx) {
       // Run ESLint on save
-      if (ctx.isDev && ctx.isClient) {
-       
-      }
     }
   }
 }
