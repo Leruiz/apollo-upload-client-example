@@ -72,5 +72,5 @@ module.exports = {
     extend(config, ctx) {
       // Run ESLint on save
     }
-  }
+  },
 }
