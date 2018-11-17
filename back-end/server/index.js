@@ -1,28 +1,27 @@
-import express from 'express'
+import bodyParser from 'body-parser';
+import express from 'express';
+import expressValidator from 'express-validator';
+import graphql from '../src-graphql';
 
-import graphql from '../src-graphql'
-import bodyParser from 'body-parser'
-import expressValidator from 'express-validator'
+const app = express();
+const host = process.env.HOST || '0.0.0.0';
+const port = process.env.PORT || 3001;
 
-const app = express()
-const host = process.env.HOST || '0.0.0.0'
-const port = process.env.PORT || 3001
-
-app.set('port', port)
+app.set('port', port);
 
 // to support JSON-encoded bodies and URL-encoded bodies
 
 app.use(bodyParser.json({
   limit: '50mb',
   extended: true
-}))
+}));
 app.use(bodyParser.urlencoded({
   limit: '50mb',
   extended: true
-}))
+}));
 // add express validator middleware
-app.use(expressValidator())
-graphql.applyMiddleware({ app })
+app.use(expressValidator());
+graphql.applyMiddleware({ app });
 // Listen the server
-app.listen(port, host)
-console.log(`Server listening on http://localhost:${port}`) // eslint-disable-line no-console
+app.listen(port, host);
+console.log(`Server listening on http://localhost:${port}`); // eslint-disable-line no-console
