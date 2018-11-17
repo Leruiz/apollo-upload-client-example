@@ -1,6 +1,6 @@
-const webpack = require('webpack')
-const resolve = require('./utils').resolve
-const srcPath = resolve('../server')
+const webpack = require('webpack');
+const resolve = require('./utils').resolve;
+const srcPath = resolve('../server');
 let config = {
   entry: {
     index: resolve(srcPath, 'index.js'),
@@ -34,6 +34,6 @@ let config = {
       'process.env.BASE_URL': JSON.stringify(process.env.BASE_URL)
     }),
   ]
-}
+};
 
-module.exports = config
+module.exports = config;
