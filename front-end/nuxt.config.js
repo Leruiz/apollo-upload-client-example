@@ -35,16 +35,17 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '@/plugins/vuetify'
+    '@/plugins/vuetify',
+    { src: '@/plugins/vue-apollo', ssr: false}
   ],
 
   /*
   ** Nuxt.js modules
   */
   modules: [
-    '@nuxtjs/apollo'
+    // '@nuxtjs/apollo'
   ],
-
+/* 
   apollo: {
     clientConfigs: {
       default: {
@@ -52,7 +53,7 @@ module.exports = {
         httpEndpoint: "http://localhost:3001/graphql"
       }
     }
-  },
+  }, */
 
   /*
   ** Build configuration

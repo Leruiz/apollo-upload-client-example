@@ -49,5 +49,16 @@ export default {
       `
     },
   },
+  mounted() {
+    console.log(this.$apollo);
+    this.$apollo.query({
+      query: gql`query {
+        message: getMessage {
+          message
+        }
+      }
+      `,
+    }).then((data) => console.log('=============', data));
+  },
 }
 </script>
