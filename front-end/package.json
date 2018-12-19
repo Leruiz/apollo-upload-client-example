@@ -21,7 +21,8 @@
     "cross-env": "^5.2.0",
     "express": "^4.16.3",
     "graphql-tag": "^2.10.0",
-    "nuxt": "^2.0.0",
+    "nuxt": "^2.3.4",
+    "nuxt-start": "^2.3.4",
     "vuetify": "^1.2.4"
   },
   "devDependencies": {
